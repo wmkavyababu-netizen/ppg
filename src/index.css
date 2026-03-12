@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1a0a1a, #0d0d0d);
+  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.glass-card {
+  background: rgba(255, 105, 180, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 105, 180, 0.25);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.neon-button {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.neon-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 20, 147, 0.8);
+}
+
+.neon-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pulse-ring {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.7;
+  }
+}
